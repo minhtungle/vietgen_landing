@@ -44,8 +44,8 @@ body {
   z-index: 99999;
 }
 
-.logo,
-.favicon {
+.favicon,
+.logo {
   height: 60px !important;
 }
 
@@ -134,7 +134,7 @@ a:focus {
 }
 
 .dark-bg {
-  background: #252525;
+  background: $color-primary-2;
   color: #fff;
 }
 
@@ -157,7 +157,8 @@ a:focus {
 }
 
 .bg-overlay:after {
-  background-color: rgba(0, 46, 91, 0.8);
+  //background-color: rgba(0, 46, 91, 0.8);
+  background-color: $color-primary-2;
   z-index: 0;
   position: absolute;
   content: '';
@@ -172,7 +173,8 @@ a:focus {
 }
 
 .bg-overlay:after {
-  background-color: rgba(0, 0, 0, 0.8);
+  //background-color: rgba(0, 0, 0, 0.8);
+  background-color: $color-primary-2;
   z-index: 0;
   position: absolute;
   content: '';

@@ -295,7 +295,7 @@
 }
 
 .call-to-action-box .action-style-box {
-  background: $color-primary;
+  background: $color-primary-2;
   padding: 30px;
 }
 
@@ -1124,7 +1124,7 @@ img.testimonial-thumb {
 /* Newsletter */
 
 .ts-newsletter {
-  background: #252525;
+  background: $color-primary-2;
   position: relative;
   min-height: 115px;
   padding: 15px 0 0 50px;
@@ -1140,7 +1140,7 @@ img.testimonial-thumb {
   &:after {
     content: "";
     position: absolute;
-    background: #252525;
+    background: $color-primary-2;
     display: block;
     width: 100%;
     height: 100%;
@@ -1149,10 +1149,11 @@ img.testimonial-thumb {
   }
 }
 .newsletter-form input {
+  color: #fff;
   background: none;
   font-size: 12px;
   height: 45px;
-  border: 1px solid rgba(255, 255, 255, .3);
+  border: 1px solid #fff;
 }
 
 
