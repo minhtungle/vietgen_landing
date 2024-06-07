@@ -16,6 +16,20 @@ body {
   padding: 0;
 }
 
+.text-bg-tienganh {
+  background: url("/images/co_nuoc_anh.jpg") text;
+  background-size: contain;
+  color: transparent;
+  // -webkit-text-stroke: 0.5px lightgrey;
+}
+
+.text-bg-tiengduc {
+  background: url("/images/co_nuoc_duc.jpg") text;
+  background-size: contain;
+  color: transparent;
+  // -webkit-text-stroke: 0.5px lightgrey;
+}
+
 .body-inner {
   position: relative;
   overflow: hidden;

@@ -100,6 +100,18 @@ body {
   padding: 0;
 }
 
+.text-bg-tienganh {
+  background: url("/images/co_nuoc_anh.jpg") text;
+  background-size: contain;
+  color: transparent;
+}
+
+.text-bg-tiengduc {
+  background: url("/images/co_nuoc_duc.jpg") text;
+  background-size: contain;
+  color: transparent;
+}
+
 .body-inner {
   position: relative;
   overflow: hidden;
