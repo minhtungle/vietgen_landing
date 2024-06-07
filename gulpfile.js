@@ -16,6 +16,7 @@ var path = {
     htminc: "source/partials/**/*.htm",
     incdir: "source/partials/",
     plugins: "source/plugins/**/*.*",
+    pages: "source/pages/**/*.*",
     js: "source/js/*.js",
     scss: "source/scss/**/*.scss",
     images: "source/images/**/*.+(png|jpg|gif|svg)",
@@ -37,11 +38,11 @@ gulp.task("html:build", function () {
     )
     .pipe(
       comments(`
-    WEBSITE: https://themefisher.com
-    TWITTER: https://twitter.com/themefisher
-    FACEBOOK: https://www.facebook.com/themefisher
-    GITHUB: https://github.com/themefisher/
-    `)
+      WEBSITE: https://www.vietgenedu.com
+      TWITTER: https://twitter.com/vietgenedu
+      FACEBOOK: https://www.facebook.com/vietgenedu
+      GITHUB: https://github.com/vietgenedu/
+      `)
     )
     .pipe(gulp.dest(path.build.dirDev))
     .pipe(
@@ -65,11 +66,11 @@ gulp.task("scss:build", function () {
     .pipe(sourcemaps.write("/"))
     .pipe(
       comments(`
-    WEBSITE: https://themefisher.com
-    TWITTER: https://twitter.com/themefisher
-    FACEBOOK: https://www.facebook.com/themefisher
-    GITHUB: https://github.com/themefisher/
-    `)
+      WEBSITE: https://www.vietgenedu.com
+      TWITTER: https://twitter.com/vietgenedu
+      FACEBOOK: https://www.facebook.com/vietgenedu
+      GITHUB: https://github.com/vietgenedu/
+      `)
     )
     .pipe(gulp.dest(path.build.dirDev + "css/"))
     .pipe(
@@ -85,11 +86,11 @@ gulp.task("js:build", function () {
     .src(path.src.js)
     .pipe(
       comments(`
-  WEBSITE: https://themefisher.com
-  TWITTER: https://twitter.com/themefisher
-  FACEBOOK: https://www.facebook.com/themefisher
-  GITHUB: https://github.com/themefisher/
-  `)
+      WEBSITE: https://www.vietgenedu.com
+      TWITTER: https://twitter.com/vietgenedu
+      FACEBOOK: https://www.facebook.com/vietgenedu
+      GITHUB: https://github.com/vietgenedu/
+      `)
     )
     .pipe(gulp.dest(path.build.dirDev + "js/"))
     .pipe(
@@ -123,6 +124,18 @@ gulp.task("plugins:build", function () {
     );
 });
 
+// Pages
+gulp.task("pages:build", function () {
+  return gulp
+    .src(path.src.pages)
+    .pipe(gulp.dest(path.build.dirDev + "pages/"))
+    .pipe(
+      bs.reload({
+        stream: true,
+      })
+    );
+});
+
 // Other files like favicon, php, sourcele-icon on root directory
 gulp.task("others:build", function () {
   return gulp.src(path.src.others).pipe(gulp.dest(path.build.dirDev));
@@ -141,6 +154,7 @@ gulp.task("watch:build", function () {
   gulp.watch(path.src.js, gulp.series("js:build"));
   gulp.watch(path.src.images, gulp.series("images:build"));
   gulp.watch(path.src.plugins, gulp.series("plugins:build"));
+  gulp.watch(path.src.pages, gulp.series("pages:build"));
 });
 
 // Dev Task
@@ -153,6 +167,7 @@ gulp.task(
     "scss:build",
     "images:build",
     "plugins:build",
+    "pages:build",
     "others:build",
     gulp.parallel("watch:build", function () {
       bs.init({
@@ -172,6 +187,7 @@ gulp.task(
     "js:build",
     "scss:build",
     "images:build",
-    "plugins:build"
+    "plugins:build",
+    "pages:build"
   )
 );
