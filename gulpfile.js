@@ -12,6 +12,7 @@ const comments = require("gulp-header-comment");
 var path = {
   src: {
     html: "source/pages/**/*.html",
+    index: "source/*.html",
     others: "source/*.+(php|ico|png)",
     htminc: "source/partials/**/*.htm",
     incdir: "source/partials/",
@@ -44,6 +45,31 @@ gulp.task("html:build", function () {
       `)
     )
     .pipe(gulp.dest(path.build.dirDev + "pages/"))
+    .pipe(
+      bs.reload({
+        stream: true,
+      })
+    );
+});
+
+// index
+gulp.task("index:build", function () {
+  return gulp
+    .src(path.src.index)
+    .pipe(
+      fileinclude({
+        basepath: path.src.incdir,
+      })
+    )
+    .pipe(
+      comments(`
+      WEBSITE: https://www.vietgenedu.com
+      TWITTER: https://twitter.com/vietgenedu
+      FACEBOOK: https://www.facebook.com/vietgenedu
+      GITHUB: https://github.com/vietgenedu/
+      `)
+    )
+    .pipe(gulp.dest(path.build.dirDev))
     .pipe(
       bs.reload({
         stream: true,
@@ -136,7 +162,8 @@ gulp.task("clean", function (cb) {
 // Watch Task
 gulp.task("watch:build", function () {
   gulp.watch(path.src.html, gulp.series("html:build"));
-  gulp.watch(path.src.htminc, gulp.series("html:build"));
+  gulp.watch(path.src.index, gulp.series("index:build"));
+  gulp.watch(path.src.htminc, gulp.series("html:build", "index:build"));
   gulp.watch(path.src.scss, gulp.series("scss:build"));
   gulp.watch(path.src.js, gulp.series("js:build"));
   gulp.watch(path.src.images, gulp.series("images:build"));
@@ -149,6 +176,7 @@ gulp.task(
   gulp.series(
     "clean",
     "html:build",
+    "index:build",
     "js:build",
     "scss:build",
     "images:build",
@@ -169,6 +197,7 @@ gulp.task(
   "build",
   gulp.series(
     "html:build",
+    "index:build",
     "js:build",
     "scss:build",
     "images:build",
