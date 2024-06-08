@@ -15,7 +15,9 @@ body {
   margin: 0;
   padding: 0;
 }
-
+.text-shadow {
+  text-shadow: 2px 2px 2px black;
+}
 .text-bg-tienganh {
   background: url("/images/co_nuoc_anh.jpg") text;
   background-size: contain;
