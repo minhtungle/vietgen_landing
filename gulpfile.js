@@ -38,7 +38,7 @@ gulp.task("html:build", function () {
     )
     .pipe(
       comments(`
-      WEBSITE: https://www.vietgenedu.com
+      WEBSITE: https://www.vietgenacademy.edu.vn
       TWITTER: https://twitter.com/vietgenedu
       FACEBOOK: https://www.facebook.com/vietgenedu
       GITHUB: https://github.com/vietgenedu/
@@ -63,7 +63,7 @@ gulp.task("index:build", function () {
     )
     .pipe(
       comments(`
-      WEBSITE: https://www.vietgenedu.com
+      WEBSITE: https://www.vietgenacademy.edu.vn
       TWITTER: https://twitter.com/vietgenedu
       FACEBOOK: https://www.facebook.com/vietgenedu
       GITHUB: https://github.com/vietgenedu/
@@ -91,7 +91,7 @@ gulp.task("scss:build", function () {
     .pipe(sourcemaps.write("/"))
     .pipe(
       comments(`
-      WEBSITE: https://www.vietgenedu.com
+      WEBSITE: https://www.vietgenacademy.edu.vn
       TWITTER: https://twitter.com/vietgenedu
       FACEBOOK: https://www.facebook.com/vietgenedu
       GITHUB: https://github.com/vietgenedu/
@@ -111,7 +111,7 @@ gulp.task("js:build", function () {
     .src(path.src.js)
     .pipe(
       comments(`
-      WEBSITE: https://www.vietgenedu.com
+      WEBSITE: https://www.vietgenacademy.edu.vn
       TWITTER: https://twitter.com/vietgenedu
       FACEBOOK: https://www.facebook.com/vietgenedu
       GITHUB: https://github.com/vietgenedu/

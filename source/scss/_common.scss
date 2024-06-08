@@ -15,9 +15,22 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.ts-facts-img span,
+.ts-service-box-img span {
+  font-size: 4rem;
+  color: $color-primary !important;
+}
+
+.ts-facts-title {
+  // color: #ffda51 !important;
+  color: $color-primary !important;
+}
+
 .text-shadow {
   text-shadow: 2px 2px 2px black;
 }
+
 .text-bg-tienganh {
   background: url("/images/co_nuoc_anh.jpg") text;
   background-size: contain;
