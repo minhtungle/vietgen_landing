@@ -1,6 +1,8 @@
 'use strict';
 class Main {
-  constructor() {}
+  constructor() {
+    this.localLocale;
+  }
   init() {
     var main = this;
     $(window).on('load', function () {
@@ -16,6 +18,7 @@ class Main {
       main.scrollTopBtn();
     });
     $(document).ready(function () {
+      main.localLocale = moment();
       main.navSearch();
       main.navbarDropdown();
       main.backToTop();
@@ -26,7 +29,13 @@ class Main {
       main.testimonialCarousel();
       main.teamCarousel();
       main.mediaPopup();
+      main.addDay();
     });
+  }
+  addDay() {
+    moment.locale('en'); // default the locale to English
+    var hienTai = main.localLocale.subtract(10, 'days').calendar();
+    $('.news .post-item-date').html('<i class="fa fa-clock-o"></i> ' + hienTai);
   }
   // change header tab
   changeHeaderTab() {

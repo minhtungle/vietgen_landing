@@ -16,6 +16,11 @@ body {
   padding: 0;
 }
 
+.latest-post-meta table tbody td,
+.latest-post-meta table thead th {
+  padding: .25rem !important;
+}
+
 .ts-facts-img span,
 .ts-service-box-img span {
   font-size: 4rem;
