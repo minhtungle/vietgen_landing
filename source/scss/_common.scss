@@ -16,9 +16,20 @@ body {
   padding: 0;
 }
 
+.feedback-img-preview {
+  width: 100% !important;
+  // object-fit: contain;
+}
+
 .latest-post-meta table tbody td,
 .latest-post-meta table thead th {
   padding: .25rem !important;
+}
+
+.latest-post {
+  &:hover {
+    animation: box-shadow-hover .6s forwards;
+  }
 }
 
 .ts-facts-img span,
@@ -40,7 +51,7 @@ body {
   background: url("/images/co_nuoc_anh.jpg") text;
   background-size: contain;
   color: transparent;
-  // -webkit-text-stroke: 0.5px lightgrey;
+  // -webkit-text-stroke: 0.2px #fff;
 }
 
 .text-bg-tiengduc {

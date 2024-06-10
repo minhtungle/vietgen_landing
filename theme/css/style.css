@@ -19,6 +19,12 @@ TWITTER: https://twitter.com/themefisher
 FACEBOOK: https://www.facebook.com/themefisher
 */
 @import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,500i,600,600i,700,700i,800|Open+Sans:400,400i,600,600i,700,700i,800&display=swap);
+@keyframes box-shadow-hover {
+  100% {
+    transform: translate(-6px, -6px);
+    box-shadow: 6px 6px 6px 1px #000;
+  }
+}
 /* Typography
 ================================================== */
 body {
@@ -104,9 +110,17 @@ body {
   padding: 0;
 }
 
+.feedback-img-preview {
+  width: 100% !important;
+}
+
 .latest-post-meta table tbody td,
 .latest-post-meta table thead th {
   padding: 0.25rem !important;
+}
+
+.latest-post:hover {
+  animation: box-shadow-hover 0.6s forwards;
 }
 
 .ts-facts-img span,
@@ -547,19 +561,6 @@ ul.list-check li:before {
 a[href^=tel] {
   color: inherit;
   text-decoration: none;
-}
-
-@keyframes bounce {
-  0% {
-    text-shadow: 0 5px 0 #ccc, 0 2px 3px rgb(0, 0, 0);
-  }
-  100% {
-    transform: translateY(-20px);
-    text-shadow: 0 50px 0 black, 0 0px 20px rgba(0, 0, 0, 0.8);
-  }
-}
-.animate-bounce {
-  animation: bounce 0.4s ease infinite alternate;
 }
 
 /* Button */
@@ -1437,7 +1438,8 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 .slick-dots li button::before {
   font-size: 12px;
 }
-.slick-dots li button:hover:before, .slick-dots .slick-dots li button:focus:before,
+.slick-dots li button:hover:before,
+.slick-dots .slick-dots li button:focus:before,
 .slick-dots li.slick-active button:before {
   opacity: 1;
   color: #cBB564;
@@ -1956,6 +1958,8 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   padding: 0;
 }
 .shuffle-item .project-img-container {
+  height: 15rem;
+  border: 0.2rem solid #fff;
   position: relative;
   overflow: hidden;
 }
