@@ -1843,6 +1843,11 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 /* Services
 ================================================== */
 /* Service box */
+.ts-service-box .ts-service-icon {
+  float: left;
+  font-size: xx-large;
+}
+
 .ts-service-box .ts-service-icon i {
   font-size: 36px;
   float: left;

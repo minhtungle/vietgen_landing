@@ -14,7 +14,6 @@ class Main {
     var main = this;
     $(window).on('load', function () {
       main.preLoader();
-      main.changeHeaderTab();
     });
     $(window).on('scroll', function () {
       /* ----------------------------------------------------------- */
@@ -26,6 +25,7 @@ class Main {
     });
     $(document).ready(function () {
       main.localLocale = moment();
+      // main.changeHeaderTab();
       main.timeline();
       main.navSearch();
       main.navbarDropdown();

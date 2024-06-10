@@ -1,5 +1,5 @@
 @@include('header.htm')
-@@include('blocks/navigation-1.htm')
+@@include('blocks/navigation-1.htm', {"trang_chu": "active"})
 
 <div class="banner-carousel banner-carousel-1 mb-0">
   <div class="banner-carousel-item" style="background-image:url(images/banner/banner1.png)">
@@ -71,7 +71,7 @@
           <div class="call-to-action-text">
             <h3 class="action-title">
               <span class="text-danger">
-                <i class="fa-solid fa-gift fa-bounce fa-xl" style="color: #FFD43B;"></i>
+                <span class="fa-fade" style="font-size: x-large;">🎁</span>
               </span>
               &ensp;Đăng ký tư vấn và học thử để nhận ưu đãi</h3>
           </div>
@@ -105,9 +105,7 @@
         <div class="row">
           <div class="col-md-6">
             <div class="ts-service-box">
-              <span class="ts-service-icon">
-                <i class="fas fa-seedling" style="color: green;"></i>
-              </span>
+              <span class="ts-service-icon">🌱</span>
               <div class="ts-service-box-content">
                 <h3 class="service-box-title">Người mới bắt đầu</h3>
               </div>
@@ -116,9 +114,7 @@
 
           <div class="col-md-6">
             <div class="ts-service-box">
-              <span class="ts-service-icon">
-                <i class="fas fa-thumbs-up" style="color: darkblue"></i>
-              </span>
+              <span class="ts-service-icon">🔥</span>
               <div class="ts-service-box-content">
                 <h3 class="service-box-title">Muốn cải thiện trình độ</h3>
               </div>
@@ -129,9 +125,7 @@
         <div class="row">
           <div class="col-md-6">
             <div class="ts-service-box">
-              <span class="ts-service-icon">
-                <i class="fa-solid fa-person-walking-luggage" style="color: red"></i>
-              </span>
+              <span class="ts-service-icon">🏃</span>
               <div class="ts-service-box-content">
                 <h3 class="service-box-title">Không có nhiều thời gian</h3>
               </div>
@@ -140,9 +134,7 @@
 
           <div class="col-md-6">
             <div class="ts-service-box">
-              <span class="ts-service-icon">
-                <i class="fas fa-headset" style="color: grey"></i>
-              </span>
+              <span class="ts-service-icon">📞</span>
               <div class="ts-service-box-content">
                 <h3 class="service-box-title">Cần tư vấn miễn phí</h3>
               </div>
@@ -163,7 +155,7 @@
               <h2 class="mb-0">
                 <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne"
                   aria-expanded="false" aria-controls="collapseOne">
-                  Bảo mật tuyệt đối
+                  <span>📛</span> Bảo mật tuyệt đối
                 </button>
               </h2>
             </div>
@@ -183,30 +175,13 @@
               </div>
             </div>
           </div>
-          <div class="card">
-            <div class="card-header p-0 bg-transparent" id="headingTwo">
-              <h2 class="mb-0">
-                <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
-                  data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  Giáo trình thiết kế riêng
-                </button>
-              </h2>
-            </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#our-values-accordion">
-              <div class="card-body">
-                <p class="text-justify">Trung tâm có đội ngũ giáo viên và chuyên gia thiết kế giáo trình chuyên sâu và
-                  linh hoạt để đáp ứng nhu cầu học tập của từng học viên. Giáo trình được cá nhân hóa để phản ánh sở
-                  thích, mục tiêu học tập và trình độ hiện tại của mỗi học viên.
-                </p>
-              </div>
-            </div>
-          </div>
+
           <div class="card">
             <div class="card-header p-0 bg-transparent" id="headingThree">
               <h2 class="mb-0">
                 <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
                   data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  Học trực tuyến
+                  <span>💻</span> Học trực tuyến
                 </button>
               </h2>
             </div>
@@ -220,12 +195,43 @@
               </div>
             </div>
           </div>
+
+          <div class="card">
+            <div class="card-header p-0 bg-transparent" id="headingTwo">
+              <h2 class="mb-0">
+                <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
+                  data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <span>💯</span> Giáo trình thiết kế riêng
+                </button>
+              </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#our-values-accordion">
+              <div class="card-body">
+                <p class="text-justify">Trung tâm có đội ngũ giáo viên và chuyên gia thiết kế giáo trình chuyên sâu và
+                  linh hoạt để đáp ứng nhu cầu học tập của từng học viên. Giáo trình được cá nhân hóa để phản ánh sở
+                  thích, mục tiêu học tập và trình độ hiện tại của mỗi học viên.
+                </p>
+                <p class="text-justify"><span class="text-danger font-bold">Phù hợp trình độ:</span> Đảm bảo rằng các
+                  gói
+                  học được thiết kế để phù hợp với trình độ hiện
+                  tại của mỗi học viên. Từ người mới bắt đầu đến những người có trình độ cao hơn, mọi người đều có cơ
+                  hội tìm thấy các chương trình học phù hợp với mình.
+                </p>
+                <p class="text-justify"><span class="text-danger font-bold">Ưu đãi:</span> Các chính sách ưu đãi và giảm
+                  giá cho các dịp đặc biệt như
+                  ngày lễ, kỷ niệm, hoặc mùa hè. Điều này giúp học viên tiết kiệm chi phí và tận hưởng các cơ hội học
+                  tập tốt nhất trong thời gian này.
+                </p>
+              </div>
+            </div>
+          </div>
+
           <div class="card">
             <div class="card-header p-0 bg-transparent" id="headingFour">
               <h2 class="mb-0">
                 <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
                   data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                  Linh hoạt thời gian
+                  <span>⏰</span> Linh hoạt thời gian
                 </button>
               </h2>
             </div>
@@ -243,29 +249,20 @@
               <h2 class="mb-0">
                 <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
                   data-target="#collapse_5" aria-expanded="false" aria-controls="collapse_5">
-                  Đa dạng gói học
+                  <span>💯</span> Đội ngũ chất lượng quốc tế
                 </button>
               </h2>
             </div>
             <div id="collapse_5" class="collapse" aria-labelledby="heading_5" data-parent="#our-values-accordion">
               <div class="card-body">
-                <p class="text-justify"><span class="text-danger font-bold">Học cá nhân - nhóm:</span> Cung cấp các lựa
-                  chọn học phù hợp với nhu cầu và phong cách học tập
-                  của mỗi học viên. Học viên có thể lựa chọn học 1 kèm 1, nơi họ sẽ nhận được sự tập trung đặc biệt từ
-                  giáo viên, hoặc học nhóm 1 kèm 2 hoặc 3, nơi họ có thể chia sẻ kiến thức và tương tác với các đồng học
-                  cùng trình độ.
+                <p class="text-justify">
+                  Giáo viên được tuyển chọn là những cá nhân có kinh nghiệm trên 5 năm giảng dạy.
                 </p>
-                <p class="text-justify"><span class="text-danger font-bold">Phù hợp trình độ:</span> Đảm bảo rằng các
-                  gói
-                  học được thiết kế để phù hợp với trình độ hiện
-                  tại của mỗi học viên. Từ người mới bắt đầu đến những người có trình độ cao hơn, mọi người đều có cơ
-                  hội tìm thấy các chương trình học phù hợp với mình.
+                <p class="text-justify">
+                  Đầy đủ chứng chỉ quốc tế về ngôn ngữ giảng dạy, đạt các thành tích cao và có tên tuổi trong lĩnh vực.
                 </p>
-                <p class="text-justify"><span class="text-danger font-bold">Ưu đãi:</span> Các chính sách ưu đãi và giảm
-                  giá cho các dịp đặc biệt như
-                  ngày lễ, kỷ niệm, hoặc mùa hè. Điều này giúp học viên tiết kiệm chi phí và tận hưởng các cơ hội học
-                  tập tốt nhất trong thời gian này.
-                </p>
+                <p><span class="text-danger font-bold">Tiếng Anh:</span> > 8.0 IELTS / > 10 CELPIP</p>
+                <p><span class="text-danger font-bold">Tiếng Đức:</span> > C2 giao tiếp</p>
               </div>
             </div>
           </div>
