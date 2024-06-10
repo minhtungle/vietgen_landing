@@ -19,6 +19,7 @@ class Main {
     });
     $(document).ready(function () {
       main.localLocale = moment();
+      main.timeline();
       main.navSearch();
       main.navbarDropdown();
       main.backToTop();
@@ -30,6 +31,43 @@ class Main {
       main.teamCarousel();
       main.mediaPopup();
       main.addDay();
+    });
+  }
+  timeline(){
+    var mySwiper = new Swiper(".swiper", {
+      autoHeight: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+      },
+      speed: 500,
+      direction: "horizontal",
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        type: "progressbar"
+      },
+      loop: false,
+      effect: "slide",
+      spaceBetween: 30,
+      on: {
+        init: function () {
+          $(".swiper-pagination-custom .swiper-pagination-switch").removeClass("active");
+          $(".swiper-pagination-custom .swiper-pagination-switch").eq(0).addClass("active");
+        },
+        slideChangeTransitionStart: function () {
+          $(".swiper-pagination-custom .swiper-pagination-switch").removeClass("active");
+          $(".swiper-pagination-custom .swiper-pagination-switch").eq(mySwiper.realIndex).addClass("active");
+        }
+      }
+    });
+    $(".swiper-pagination-custom .swiper-pagination-switch").click(function () {
+      mySwiper.slideTo($(this).index());
+      $(".swiper-pagination-custom .swiper-pagination-switch").removeClass("active");
+      $(this).addClass("active");
     });
   }
   addDay() {
@@ -189,18 +227,19 @@ class Main {
 
   // banner Carousel Two
   bannerCarouselTwo() {
-    $('.banner-carousel.banner-carousel-2').slick({
+    $('#timeline-container .banner-carousel.banner-carousel-2').slick({
       fade: true,
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
       dots: false,
-      speed: 800,
+      speed: 5000,
       arrows: true,
       prevArrow: '<button type="button" class="carousel-control left" aria-label="carousel-control"><i class="fas fa-chevron-left"></i></button>',
       nextArrow: '<button type="button" class="carousel-control right" aria-label="carousel-control"><i class="fas fa-chevron-right"></i></button>'
     });
-  }
+    $('#timeline-container .banner-carousel.banner-carousel-1').slickAnimation();
+    }
 
   // pageSlider
   pageSlider() {
