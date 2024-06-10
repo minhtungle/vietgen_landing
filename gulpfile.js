@@ -22,7 +22,7 @@ var path = {
     images: "source/images/**/*.+(png|jpg|gif|svg)",
   },
   build: {
-    dirBuild: "theme/pages",
+    dirBuild: "theme/",
     dirDev: "theme/",
   },
 };
