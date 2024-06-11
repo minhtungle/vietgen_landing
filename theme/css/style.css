@@ -39,6 +39,7 @@ p {
   -webkit-font-smoothing: antialiased !important;
   line-height: 26px;
   font-size: 15px;
+  text-align: justify;
 }
 
 h1,
