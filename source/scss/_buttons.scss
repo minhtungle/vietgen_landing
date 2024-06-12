@@ -1,10 +1,12 @@
 /* Button */
 .btn {
+
   &:active,
   &:focus {
-      box-shadow: none !important;
+    box-shadow: none !important;
   }
 }
+
 .btn-primary,
 .btn-dark {
   border: 0;
@@ -13,11 +15,12 @@
   font-weight: 700;
   text-transform: uppercase;
   color: #fff;
-  font-family: $font-secondary;
+  font-family: $font-Nunito;
   transition: 350ms;
   font-size: 14px;
+
   @include tablet {
-      font-size: 13px;
+    font-size: 13px;
   }
 }
 
@@ -39,10 +42,11 @@
 .btn-white.btn-primary:hover {
   background: #111;
   color: #fff;
+
   &:active,
   &:focus {
-      color: #fff;
-      background-color: #111 !important;
+    color: #fff;
+    background-color: #111 !important;
   }
 }
 
