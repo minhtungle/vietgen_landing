@@ -3,6 +3,14 @@
 
   100% {
     transform: translate(-6px, -6px);
-    box-shadow: 6px 6px 6px 1px #000;
+    box-shadow: 6px 6px 6px 1px #000000b5;
+  }
+}
+
+.latest-post,
+.clients-logo,
+.gioithieu-congty {
+  &:hover {
+    animation: box-shadow-hover .5s forwards;
   }
 }

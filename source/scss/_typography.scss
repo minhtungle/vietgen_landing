@@ -26,7 +26,8 @@ h5,
 h6 {
   color: #212121;
   font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
+  // font-family: 'Montserrat', sans-serif;
+  font-family: $font-secondary;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased !important;
 }
