@@ -7,26 +7,7 @@
     <div class="row">
 
       <div class="col-xl-3 col-lg-4">
-        <div class="sidebar sidebar-left">
-          <!--Tiếng Anh-->
-          <div class="widget">
-            <h3 class="widget-title">Tiếng Anh</h3>
-            <ul class="nav service-menu">
-              <li><a href="/pages/chuong_trinh_hoc/tieng_anh/giao_tiep.html">Giao tiếp</a></li>
-              <li><a href="/pages/chuong_trinh_hoc/tieng_anh/ielts.html">IELTS</a></li>
-              <li><a href="/pages/chuong_trinh_hoc/tieng_anh/celpip.html">CELPIP</a></li>
-            </ul>
-          </div>
-          <!--Tiếng Đức-->
-          <div class="widget">
-            <h3 class="widget-title">Tiếng Đức</h3>
-            <ul class="nav service-menu">
-              <li><a href="/pages/chuong_trinh_hoc/tieng_duc/giao_tiep.html">Giao tiếp</a></li>
-              <li><a href="/pages/chuong_trinh_hoc/tieng_duc/chung_chi.html">Chứng chỉ</a></li>
-              <li class="active"><a href="/pages/chuong_trinh_hoc/tieng_duc/telc.html">Ôn thi/Quốc tịch</a></li>
-            </ul>
-          </div>
-        </div><!-- Sidebar end -->
+        @@include('blocks/chuong_trinh_hoc_sidebar.htm', {"tiengduc_quoc_tich": "active"})
       </div><!-- Sidebar Col end -->
       <div class="col-xl-8 col-lg-8">
         <div class="content-inner-page">
