@@ -369,7 +369,7 @@ class GoogleSheet {
       chuongTrinhHoc: $("#input-chuongtrinhhoc", $("#form-dangkytuvan")).val(),
       noiDung: $("#input-noidung", $("#form-dangkytuvan")).val(),
     };
-    var url = ``;
+    var url = `https://script.google.com/macros/s/AKfycbzLOuZrPRwRkgq_tPQjBXI-gt21rTkd78eOvIxkXl-ZmvYyQVl7hJWyQBGdjjRzNOgA/exec`;
     await fetch(url, {
       method: "POST",
       headers: {
