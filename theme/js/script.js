@@ -7,9 +7,18 @@
 
 'use strict';
 var localLocale
+// const express = require("express");
+// const cors = require("cors");
+
+// const corsOptions = {
+//   origin: "http://127.0.0.1:5173",
+// };
+
+// const app = express();
+// app.use(cors(corsOptions));
 
 class Main {
-  constructor() {}
+  constructor() { }
   init() {
     var main = this;
     $(window).on('load', function () {
@@ -50,6 +59,36 @@ class Main {
       window.open(facebook);
     } else {
       window.open(facebook);
+    };
+  }
+  displayModal_DangKyTuVan(displayStatus = 'show') {
+    sys.displayModal({
+      name: '#form-dangkytuvan',
+      displayStatus
+    });
+  }
+  async dangKyTuVan() {
+    var modalValidtion = htmlEl.activeValidationStates("#form-dangkytuvan");
+    if (modalValidtion) {
+      var thongTinNguoiDangKy = {
+        thoiGian: localLocale.subtract(10, 'days').calendar(),
+        hoTen: $("#input-hoten", $("#form-dangkytuvan")).val(),
+        email: $("#input-email", $("#form-dangkytuvan")).val(),
+        chuongTrinhHoc: $("#select-chuongtrinhhoc", $("#form-dangkytuvan")).val(),
+        noiDung: $("#input-noidung", $("#form-dangkytuvan")).val(),
+      };
+      main.displayModal_DangKyTuVan('hide')
+      sys.alert({ status: 'success', mess: "Đăng ký thành công, VIETGEN sẽ liên hệ với bạn sau ít phút" });
+      // var url = `https://script.google.com/macros/s/AKfycbzLOuZrPRwRkgq_tPQjBXI-gt21rTkd78eOvIxkXl-ZmvYyQVl7hJWyQBGdjjRzNOgA/exec`;
+      // var res = await fetch(url, {
+      //   method: "POST",
+      //   mode: "cors",
+      //   headers: {
+      //     "Content-Type": "text/plain;charset=utf-8"
+      //   },
+      //   body: JSON.stringify(thongTinNguoiDangKy)
+      // });
+      // console.log(res.json());
     };
   }
   timeline() {
@@ -320,26 +359,26 @@ class Main {
       prevArrow: '<button type="button" class="carousel-control left" aria-label="carousel-control"><i class="fas fa-chevron-left"></i></button>',
       nextArrow: '<button type="button" class="carousel-control right" aria-label="carousel-control"><i class="fas fa-chevron-right"></i></button>',
       responsive: [{
-          breakpoint: 992,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3
-          }
-        },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2
-          }
-        },
-        {
-          breakpoint: 481,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3
         }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 481,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
       ]
     });
   }
@@ -356,27 +395,6 @@ class Main {
       innerWidth: 600,
       innerHeight: 400
     });
-  }
-}
-class GoogleSheet {
-  constructor() {}
-  async dangKyTuVan() {
-    var googleSheet = this;
-    var thongTinNguoiDangKy = {
-      thoiGian: localLocale.subtract(10, 'days').calendar(),
-      hoTen: $("#input-hoten", $("#form-dangkytuvan")).val(),
-      email: $("#input-email", $("#form-dangkytuvan")).val(),
-      chuongTrinhHoc: $("#input-chuongtrinhhoc", $("#form-dangkytuvan")).val(),
-      noiDung: $("#input-noidung", $("#form-dangkytuvan")).val(),
-    };
-    var url = `https://script.google.com/macros/s/AKfycbzLOuZrPRwRkgq_tPQjBXI-gt21rTkd78eOvIxkXl-ZmvYyQVl7hJWyQBGdjjRzNOgA/exec`;
-    await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "text/plain;charset=utf-8"
-      },
-      body: JSON.stringify(thongTinNguoiDangKy)
-    })
   }
 }
 var main = new Main();

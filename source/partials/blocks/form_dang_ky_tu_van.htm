@@ -1,0 +1,72 @@
+<div class="modal fade text-left" id="form-dangkytuvan" tabindex="-1" data-bs-keyboard="false" data-bs-backdrop="static"
+  removeBody="false">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title text-danger fa-fade">🎁 ĐĂNG KÝ NHẬN TƯ VẤN</h3>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <!--Họ tên-->
+          <div class="col-12 col-sm-12 col-md-6">
+            <div class="position-relative">
+              <div class="form-group mb-3">
+                <label for="input-hoten">Họ tên</label>
+                <input type="text" class="form-control" placeholder="Nhập thông tin ..." id="input-hoten" required>
+                <div class="invalid-feedback feedback" for="input-hoten">Không được để trống</div>
+              </div>
+            </div>
+          </div>
+          <!--Email-->
+          <div class="col-12 col-sm-12 col-md-6">
+            <div class="position-relative">
+              <div class="form-group mb-3">
+                <label for="input-email">Email</label>
+                <input type="text" class="form-control" placeholder="Nhập thông tin ..." id="input-email" required>
+                <div class="invalid-feedback feedback" for="input-email">Không được để trống</div>
+              </div>
+            </div>
+          </div>
+          <!--Chương trình học-->
+          <div class="col-12">
+            <div class="position-relative">
+              <div class="form-group mb-3">
+                <label class="required" for="select-chuongtrinhhoc">Chương trình học đang quan tâm</label>
+                <select class="form-control" id="select-chuongtrinhhoc" name="select-chuongtrinhhoc" required>
+                  <option disabled>Chọn thông tin</option>
+                  <option value="Tiếng Anh - Giao tiếp" selected>Tiếng Anh - Giao tiếp</option>
+                  <option value="Tiếng Anh - IELTS">Tiếng Anh - IELTS</option>
+                  <option value="Tiếng Anh - CELPIP">Tiếng Anh - CELPIP</option>
+                  <option value="Tiếng Anh - Ôn thi/Quốc tịch">Tiếng Anh - Ôn thi/Quốc tịch</option>
+
+                  <option value="Tiếng Đức - Giao tiếp">Tiếng Đức - Giao tiếp</option>
+                  <option value="Tiếng Đức - Chứng chỉ">Tiếng Đức - Chứng chỉ</option>
+                  <option value="Tiếng Đức - Ôn thi/Quốc tịch">Tiếng Đức - Ôn thi/Quốc tịch</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <!--Nội dung-->
+          <div class="col-12 col-sm-12 col-md-12">
+            <div class="position-relative">
+              <div class="form-group mb-3">
+                <label for="input-noidung">Nội dung cần tư vấn</label>
+                <textarea class="form-control min-h-100 max-h-200" id="input-noidung" rows="3"
+                  placeholder="Nhập nội dung ..."></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary ml-1" onclick="main.dangKyTuVan()">
+          <span class="">Đăng ký</span>
+        </button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+          onclick="main.displayModal_DangKyTuVan('hide')">
+          <span class="">Đóng</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
