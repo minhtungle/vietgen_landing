@@ -112,17 +112,14 @@
           <div class="col-lg-4 col-md-4 top-social text-center text-md-right">
             <ul class="list-unstyled">
               <li>
-                <a title="Facebook" href="https://facebbok.com/vietgenacademy.com">
+                <a title="Facebook" onclick="main.lienKetMXH()">
                   <span class="social-icon"><i class="fab fa-facebook-f"></i></span>
                 </a>
-                <a title="Twitter" href="https://twitter.com/vietgenacademy.com">
+                <a title="Twitter" onclick="main.lienKetMXH()">
                   <span class="social-icon"><i class="fab fa-twitter"></i></span>
                 </a>
-                <a title="Instagram" href="https://instagram.com/vietgenacademy.com">
+                <a title="Instagram" onclick="main.lienKetMXH()">
                   <span class="social-icon"><i class="fab fa-instagram"></i></span>
-                </a>
-                <a title="Linkdin" href="https://github.com/vietgenacademy.com">
-                  <span class="social-icon"><i class="fab fa-github"></i></span>
                 </a>
               </li>
             </ul>
@@ -205,7 +202,8 @@
                   <a href="/pages/ve_chung_toi/ve_chung_toi.html" class="nav-link">Về chúng tôi</a>
                 </li> -->
                 <li class="nav-item dropdown @@gioi_thieu" data-site="gioi_thieu">
-                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" style="font-size: 14px;">Giới
+                  <a onclick="main.lienKetMXH()" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                    style="font-size: 14px;">Giới
                     thiệu&ensp;<i class="fa fa-angle-down"></i></a>
                   <ul class="dropdown-menu" role="menu">
                     <li class="@@ve_chung_toi" data-site="">
@@ -239,7 +237,7 @@
                 </li>
                 <!--Khác-->
                 <li class="nav-item dropdown d-none" data-site="_khac">
-                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Khác&ensp;<i
+                  <a onclick="main.lienKetMXH()" class="nav-link dropdown-toggle" data-toggle="dropdown">Khác&ensp;<i
                       class="fa fa-angle-down"></i></a>
                   <ul class="dropdown-menu" role="menu">
                     <li data-site=""><a href="/pages/_khac/index.html">Home One</a></li>
@@ -294,72 +292,79 @@
 <div id="banner-area" class="banner-area" style="background-image:url(/images/banner/banner1.png)">
   <div class="banner-text">
     <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-              <div class="banner-heading">
-                <h1 class="banner-title">About</h1>
-                <!-- <nav aria-label="breadcrumb">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="banner-heading">
+            <h1 class="banner-title">About</h1>
+            <!-- <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center">
-                      <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
-                      <li class="breadcrumb-item"><a href="#">company</a></li>
+                      <li class="breadcrumb-item"><a onclick="main.lienKetMXH()">Trang chủ</a></li>
+                      <li class="breadcrumb-item"><a onclick="main.lienKetMXH()">company</a></li>
                       <li class="breadcrumb-item active" aria-current="page">About Us</li>
                     </ol>
                 </nav> -->
-              </div>
-          </div><!-- Col end -->
-        </div><!-- Row end -->
+          </div>
+        </div><!-- Col end -->
+      </div><!-- Row end -->
     </div><!-- Container end -->
   </div><!-- Banner text end -->
-</div><!-- Banner area end --> 
+</div><!-- Banner area end -->
+
 
 <section id="main-container" class="main-container">
   <div class="container">
     <div class="row">
-        <div class="col-lg-6">
-          <h3 class="column-title">Who We Are</h3>
-          <p>when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin.</p>
-          <blockquote><p>Semporibus autem quibusdam et aut officiis debitis aut rerum est aut optio cumque nihil necessitatibus autemn ec tincidunt nunc posuere ut</p></blockquote>
-          <p>He lay on his armour-like  back, and if he lifted. ultrices ultrices sapien, nec tincidunt nunc posuere ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn’t anything embarrassing.</p>
+      <div class="col-lg-6">
+        <h3 class="column-title">Who We Are</h3>
+        <p>when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin.
+        </p>
+        <blockquote>
+          <p>Semporibus autem quibusdam et aut officiis debitis aut rerum est aut optio cumque nihil necessitatibus
+            autemn ec tincidunt nunc posuere ut</p>
+        </blockquote>
+        <p>He lay on his armour-like back, and if he lifted. ultrices ultrices sapien, nec tincidunt nunc posuere ut.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. If you are going to use a passage of Lorem Ipsum, you
+          need to be sure there isn’t anything embarrassing.</p>
 
-        </div><!-- Col end -->
+      </div><!-- Col end -->
 
-        <div class="col-lg-6 mt-5 mt-lg-0">
-          
-          <div id="page-slider" class="page-slider small-bg">
+      <div class="col-lg-6 mt-5 mt-lg-0">
 
-              <div class="item" style="background-image:url(/images/slider-pages/slide-page1.jpg)">
-                <div class="container">
-                    <div class="box-slider-content">
-                      <div class="box-slider-text">
-                          <h2 class="box-slide-title">Leadership</h2>
-                      </div>    
-                    </div>
+        <div id="page-slider" class="page-slider small-bg">
+
+          <div class="item" style="background-image:url(/images/slider-pages/slide-page1.jpg)">
+            <div class="container">
+              <div class="box-slider-content">
+                <div class="box-slider-text">
+                  <h2 class="box-slide-title">Leadership</h2>
                 </div>
-              </div><!-- Item 1 end -->
+              </div>
+            </div>
+          </div><!-- Item 1 end -->
 
-              <div class="item" style="background-image:url(/images/slider-pages/slide-page2.jpg)">
-                <div class="container">
-                    <div class="box-slider-content">
-                      <div class="box-slider-text">
-                          <h2 class="box-slide-title">Relationships</h2>
-                      </div>    
-                    </div>
+          <div class="item" style="background-image:url(/images/slider-pages/slide-page2.jpg)">
+            <div class="container">
+              <div class="box-slider-content">
+                <div class="box-slider-text">
+                  <h2 class="box-slide-title">Relationships</h2>
                 </div>
-              </div><!-- Item 1 end -->
+              </div>
+            </div>
+          </div><!-- Item 1 end -->
 
-              <div class="item" style="background-image:url(/images/slider-pages/slide-page3.jpg)">
-                <div class="container">
-                    <div class="box-slider-content">
-                      <div class="box-slider-text">
-                          <h2 class="box-slide-title">Performance</h2>
-                      </div>    
-                    </div>
+          <div class="item" style="background-image:url(/images/slider-pages/slide-page3.jpg)">
+            <div class="container">
+              <div class="box-slider-content">
+                <div class="box-slider-text">
+                  <h2 class="box-slide-title">Performance</h2>
                 </div>
-              </div><!-- Item 1 end -->
-          </div><!-- Page slider end-->          
-        
+              </div>
+            </div>
+          </div><!-- Item 1 end -->
+        </div><!-- Page slider end-->
 
-        </div><!-- Col end -->
+
+      </div><!-- Col end -->
     </div><!-- Content row end -->
 
   </div><!-- Container end -->
@@ -437,131 +442,147 @@
 <section id="ts-team" class="ts-team">
   <div class="container">
     <div class="row text-center">
-        <div class="col-lg-12">
-          <h2 class="section-title">Quality Service</h2>
-          <h3 class="section-sub-title">Professional Team</h3>
-        </div>
-    </div><!--/ Title row end -->
+      <div class="col-lg-12">
+        <h2 class="section-title">Quality Service</h2>
+        <h3 class="section-sub-title">Professional Team</h3>
+      </div>
+    </div>
+    <!--/ Title row end -->
 
     <div class="row">
-        <div class="col-lg-12">
-          <div id="team-slide" class="team-slide">
-              <div class="item">
-                <div class="ts-team-wrapper">
-                    <div class="team-img-wrapper">
-                      <img loading="lazy" class="w-100" src="/images/team/team1.jpg" alt="team-img">
-                    </div>
-                    <div class="ts-team-content">
-                      <h3 class="ts-name">Nats Stenman</h3>
-                      <p class="ts-designation">Chief Operating Officer</p>
-                      <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
-                      <div class="team-social-icons">
-                          <a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-google-plus"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
-                      </div><!--/ social-icons-->
-                    </div>
-                </div><!--/ Team wrapper end -->
-              </div><!-- Team 1 end -->
+      <div class="col-lg-12">
+        <div id="team-slide" class="team-slide">
+          <div class="item">
+            <div class="ts-team-wrapper">
+              <div class="team-img-wrapper">
+                <img loading="lazy" class="w-100" src="/images/team/team1.jpg" alt="team-img">
+              </div>
+              <div class="ts-team-content">
+                <h3 class="ts-name">Nats Stenman</h3>
+                <p class="ts-designation">Chief Operating Officer</p>
+                <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
+                <div class="team-social-icons">
+                  <a target="_blank" onclick="main.lienKetMXH()"><i class="fab fa-facebook-f"></i></a>
+                  <a target="_blank" onclick="main.lienKetMXH()"><i class="fab fa-twitter"></i></a>
+                  <a target="_blank" onclick="main.lienKetMXH()"><i class="fab fa-google-plus"></i></a>
+                  <a target="_blank" onclick="main.lienKetMXH()"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <!--/ social-icons-->
+              </div>
+            </div>
+            <!--/ Team wrapper end -->
+          </div><!-- Team 1 end -->
 
-              <div class="item">
-                <div class="ts-team-wrapper">
-                    <div class="team-img-wrapper">
-                      <img loading="lazy" class="w-100" src="/images/team/team2.jpg" alt="team-img">
-                    </div>
-                    <div class="ts-team-content">
-                      <h3 class="ts-name">Angela Lyouer</h3>
-                      <p class="ts-designation">Innovation Officer</p>
-                      <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
-                      <div class="team-social-icons">
-                          <a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
-                      </div><!--/ social-icons-->
-                    </div>
-                </div><!--/ Team wrapper end -->
-              </div><!-- Team 2 end -->
+          <div class="item">
+            <div class="ts-team-wrapper">
+              <div class="team-img-wrapper">
+                <img loading="lazy" class="w-100" src="/images/team/team2.jpg" alt="team-img">
+              </div>
+              <div class="ts-team-content">
+                <h3 class="ts-name">Angela Lyouer</h3>
+                <p class="ts-designation">Innovation Officer</p>
+                <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
+                <div class="team-social-icons">
+                  <a target="_blank" onclick="main.lienKetMXH()"><i class="fab fa-facebook-f"></i></a>
+                  <a target="_blank" onclick="main.lienKetMXH()"><i class="fab fa-twitter"></i></a>
+                  <a target="_blank" onclick="main.lienKetMXH()"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <!--/ social-icons-->
+              </div>
+            </div>
+            <!--/ Team wrapper end -->
+          </div><!-- Team 2 end -->
 
-              <div class="item">
-                <div class="ts-team-wrapper">
-                    <div class="team-img-wrapper">
-                      <img loading="lazy" class="w-100" src="/images/team/team3.jpg" alt="team-img">
-                    </div>
-                    <div class="ts-team-content">
-                      <h3 class="ts-name">Mark Conter</h3>
-                      <p class="ts-designation">Safety Officer</p>
-                      <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
-                      <div class="team-social-icons">
-                          <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-google-plus"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
-                      </div><!--/ social-icons-->
-                    </div>
-                </div><!--/ Team wrapper end -->
-              </div><!-- Team 3 end -->
+          <div class="item">
+            <div class="ts-team-wrapper">
+              <div class="team-img-wrapper">
+                <img loading="lazy" class="w-100" src="/images/team/team3.jpg" alt="team-img">
+              </div>
+              <div class="ts-team-content">
+                <h3 class="ts-name">Mark Conter</h3>
+                <p class="ts-designation">Safety Officer</p>
+                <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
+                <div class="team-social-icons">
+                  <a target="_blank" onclick="main.lienKetMXH()"><i class="fab fa-twitter"></i></a>
+                  <a target="_blank" onclick="main.lienKetMXH()"><i class="fab fa-google-plus"></i></a>
+                  <a target="_blank" onclick="main.lienKetMXH()"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <!--/ social-icons-->
+              </div>
+            </div>
+            <!--/ Team wrapper end -->
+          </div><!-- Team 3 end -->
 
-              <div class="item">
-                <div class="ts-team-wrapper">
-                    <div class="team-img-wrapper">
-                      <img loading="lazy" class="w-100" src="/images/team/team4.jpg" alt="team-img">
-                    </div>
-                    <div class="ts-team-content">
-                      <h3 class="ts-name">Ayesha Stewart</h3>
-                      <p class="ts-designation">Finance Officer</p>
-                      <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
-                      <div class="team-social-icons">
-                          <a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-google-plus"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
-                      </div><!--/ social-icons-->
-                    </div>
-                </div><!--/ Team wrapper end -->
-              </div><!-- Team 4 end -->
+          <div class="item">
+            <div class="ts-team-wrapper">
+              <div class="team-img-wrapper">
+                <img loading="lazy" class="w-100" src="/images/team/team4.jpg" alt="team-img">
+              </div>
+              <div class="ts-team-content">
+                <h3 class="ts-name">Ayesha Stewart</h3>
+                <p class="ts-designation">Finance Officer</p>
+                <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
+                <div class="team-social-icons">
+                  <a target="_blank" onclick="main.lienKetMXH()"><i class="fab fa-facebook-f"></i></a>
+                  <a target="_blank" onclick="main.lienKetMXH()"><i class="fab fa-twitter"></i></a>
+                  <a target="_blank" onclick="main.lienKetMXH()"><i class="fab fa-google-plus"></i></a>
+                  <a target="_blank" onclick="main.lienKetMXH()"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <!--/ social-icons-->
+              </div>
+            </div>
+            <!--/ Team wrapper end -->
+          </div><!-- Team 4 end -->
 
-              <div class="item">
-                <div class="ts-team-wrapper">
-                    <div class="team-img-wrapper">
-                      <img loading="lazy" class="w-100" src="/images/team/team5.jpg" alt="team-img">
-                    </div>
-                    <div class="ts-team-content">
-                      <h3 class="ts-name">Dave Clarkte</h3>
-                      <p class="ts-designation">Civil Engineer</p>
-                      <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
-                      <div class="team-social-icons">
-                          <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-google-plus"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
-                      </div><!--/ social-icons-->
-                    </div>
-                </div><!--/ Team wrapper end -->
-              </div><!-- Team 5 end -->
+          <div class="item">
+            <div class="ts-team-wrapper">
+              <div class="team-img-wrapper">
+                <img loading="lazy" class="w-100" src="/images/team/team5.jpg" alt="team-img">
+              </div>
+              <div class="ts-team-content">
+                <h3 class="ts-name">Dave Clarkte</h3>
+                <p class="ts-designation">Civil Engineer</p>
+                <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
+                <div class="team-social-icons">
+                  <a target="_blank" onclick="main.lienKetMXH()"><i class="fab fa-twitter"></i></a>
+                  <a target="_blank" onclick="main.lienKetMXH()"><i class="fab fa-google-plus"></i></a>
+                  <a target="_blank" onclick="main.lienKetMXH()"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <!--/ social-icons-->
+              </div>
+            </div>
+            <!--/ Team wrapper end -->
+          </div><!-- Team 5 end -->
 
-              <div class="item">
-                <div class="ts-team-wrapper">
-                    <div class="team-img-wrapper">
-                      <img loading="lazy" class="w-100" src="/images/team/team6.jpg" alt="team-img">
-                    </div>
-                    <div class="ts-team-content">
-                      <h3 class="ts-name">Elton Joe</h3>
-                      <p class="ts-designation">Site Supervisor</p>
-                      <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
-                      <div class="team-social-icons">
-                          <a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-google-plus"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
-                      </div><!--/ social-icons-->
-                    </div>
-                </div><!--/ Team wrapper end -->
-              </div><!-- Team 6 end -->
+          <div class="item">
+            <div class="ts-team-wrapper">
+              <div class="team-img-wrapper">
+                <img loading="lazy" class="w-100" src="/images/team/team6.jpg" alt="team-img">
+              </div>
+              <div class="ts-team-content">
+                <h3 class="ts-name">Elton Joe</h3>
+                <p class="ts-designation">Site Supervisor</p>
+                <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
+                <div class="team-social-icons">
+                  <a target="_blank" onclick="main.lienKetMXH()"><i class="fab fa-facebook-f"></i></a>
+                  <a target="_blank" onclick="main.lienKetMXH()"><i class="fab fa-twitter"></i></a>
+                  <a target="_blank" onclick="main.lienKetMXH()"><i class="fab fa-google-plus"></i></a>
+                  <a target="_blank" onclick="main.lienKetMXH()"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <!--/ social-icons-->
+              </div>
+            </div>
+            <!--/ Team wrapper end -->
+          </div><!-- Team 6 end -->
 
-          </div><!-- Team slide end -->
-        </div>
-    </div><!--/ Content row end -->
-  </div><!--/ Container end -->
-</section><!--/ Team end -->
+        </div><!-- Team slide end -->
+      </div>
+    </div>
+    <!--/ Content row end -->
+  </div>
+  <!--/ Container end -->
+</section>
+<!--/ Team end -->
 
   <footer id="footer" class="footer bg-overlay">
     <div class="footer-main">
@@ -576,11 +597,10 @@
             </p> -->
             <div class="footer-social">
               <ul>
-                <li><a href="" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <li><a onclick="main.lienKetMXH()" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a onclick="main.lienKetMXH()" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                 </li>
-                <li><a href="" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="" aria-label="Github"><i class="fab fa-github"></i></a></li>
+                <li><a onclick="main.lienKetMXH()" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
               </ul>
             </div><!-- Footer social end -->
           </div><!-- Col end -->
@@ -671,3 +691,4 @@
   </body>
 
   </html>
+
