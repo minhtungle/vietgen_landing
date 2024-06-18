@@ -70,7 +70,7 @@ class Main {
         chuongTrinhHoc: $("#select-chuongtrinhhoc", $("#form-dangkytuvan")).val(),
         noiDung: $("#input-noidung", $("#form-dangkytuvan")).val(),
       };
-      main.displayModal_DangKyTuVan('hide')
+      main.displayModal_DangKyTuVan('hide');
       sys.alert({ status: 'success', mess: "Đăng ký thành công, VIETGEN sẽ liên hệ với bạn sau ít phút" });
       // var url = `https://script.google.com/macros/s/AKfycbzLOuZrPRwRkgq_tPQjBXI-gt21rTkd78eOvIxkXl-ZmvYyQVl7hJWyQBGdjjRzNOgA/exec`;
       // var res = await fetch(url, {
