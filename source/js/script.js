@@ -15,7 +15,7 @@ class Main {
   init() {
     var main = this;
     $(window).on('load', function () {
-      main.preLoader();
+      // main.preLoader();
     });
     $(window).on('scroll', function () {
       /* ----------------------------------------------------------- */
