@@ -14,8 +14,9 @@ class Main {
   constructor() { }
   init() {
     var main = this;
-    // main.changeHeaderTab();
     localLocale = moment();
+    moment.locale('en'); // default the locale to English
+
     main.timeline();
     main.navSearch();
     main.navbarDropdown();
@@ -109,40 +110,8 @@ class Main {
     });
   }
   addDay() {
-    moment.locale('en'); // default the locale to English
     var hienTai = localLocale.subtract(10, 'days').calendar();
     $('.news .post-item-date').html('<i class="fa fa-clock-o"></i> ' + hienTai);
-  }
-  // change header tab
-  changeHeaderTab() {
-    // Lấy các thẻ li chuyển tab
-    var $allSiteTabs = $('.navbar li');
-    // Hủy active tất cả tab
-    $allSiteTabs.removeClass('active');
-
-    // Lấy URL của trang hiện tại
-    var currentPageUrl = window.location.href;
-    // Tách tên trang từ URL
-    var currentPageName = currentPageUrl.split("/").pop().split(".")[0];
-    if (currentPageName == "" || currentPageName == "index") {
-      $('.navbar li[data-site="trangchu"]').addClass('active');
-    } else {
-      $.each($allSiteTabs, function () {
-        var $thisTab = $(this);
-        var dataSite = $thisTab.attr('data-site');
-        if (dataSite) {
-          var slitIt = dataSite.split('/');
-          var kiemTra = slitIt[slitIt.length - 1] == currentPageName;
-          // Phần tử cuối là trang hiện tại
-          if (kiemTra) {
-            // active theo đường dẫn thẻ
-            slitIt.map(page => {
-              $(`.navbar li[data-site="${page}"]`).addClass('active');
-            })
-          };
-        }
-      });
-    };
   }
 
   // Preloader js    
