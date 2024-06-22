@@ -14,33 +14,20 @@ class Main {
   constructor() { }
   init() {
     var main = this;
-    $(window).on('load', function () {
-      // main.preLoader();
-    });
-    $(window).on('scroll', function () {
-      /* ----------------------------------------------------------- */
-      /*  Fixed header
-      /* ----------------------------------------------------------- */
-      main.fixedHeader();
-      main.counter();
-      main.scrollTopBtn();
-    });
-    $(document).ready(function () {
-      // main.changeHeaderTab();
-      localLocale = moment();
-      main.timeline();
-      main.navSearch();
-      main.navbarDropdown();
-      main.backToTop();
-      main.bannerCarouselOne();
-      main.bannerCarouselTwo();
-      main.pageSlider();
-      main.projectShuffle();
-      main.testimonialCarousel();
-      main.teamCarousel();
-      main.mediaPopup();
-      main.addDay();
-    });
+    // main.changeHeaderTab();
+    localLocale = moment();
+    main.timeline();
+    main.navSearch();
+    main.navbarDropdown();
+    main.backToTop();
+    main.bannerCarouselOne();
+    main.bannerCarouselTwo();
+    main.pageSlider();
+    main.projectShuffle();
+    main.testimonialCarousel();
+    main.teamCarousel();
+    main.mediaPopup();
+    main.addDay();
   }
   lienKetMXH(tenTrang = "facebook") {
     var facebook = "https://www.facebook.com/tuyendungnhansucapcaoVN";
@@ -390,5 +377,21 @@ class Main {
     });
   }
 }
+
 var main = new Main();
-main.init();
+
+$(document).ready(function () {
+  main.init();
+})
+
+$(window).on('load', function () {
+  main.preLoader();
+});
+$(window).on('scroll', function () {
+  /* ----------------------------------------------------------- */
+  /*  Fixed header
+  /* ----------------------------------------------------------- */
+  main.fixedHeader();
+  main.counter();
+  main.scrollTopBtn();
+});
