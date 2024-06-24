@@ -18,7 +18,7 @@ var localLocale
 // app.use(cors(corsOptions));
 
 class Main {
-  constructor() { }
+  constructor() {}
   init() {
     var main = this;
     localLocale = moment();
@@ -49,36 +49,41 @@ class Main {
       window.open(facebook);
     };
   }
-  // displayModal_DangKyTuVan(displayStatus = 'show') {
-  //   sys.displayModal({
-  //     name: '#form-dangkytuvan',
-  //     displayStatus
-  //   });
-  // }
-  // async dangKyTuVan() {
-  //   var modalValidtion = htmlEl.activeValidationStates("#form-dangkytuvan");
-  //   if (modalValidtion) {
-  //     var thongTinNguoiDangKy = {
-  //       thoiGian: localLocale.subtract(10, 'days').calendar(),
-  //       hoTen: $("#input-hoten", $("#form-dangkytuvan")).val(),
-  //       email: $("#input-email", $("#form-dangkytuvan")).val(),
-  //       chuongTrinhHoc: $("#select-chuongtrinhhoc", $("#form-dangkytuvan")).val(),
-  //       noiDung: $("#input-noidung", $("#form-dangkytuvan")).val(),
-  //     };
-  //     main.displayModal_DangKyTuVan('hide');
-  //     sys.alert({ status: 'success', mess: "Đăng ký thành công, VIETGEN sẽ liên hệ với bạn sau ít phút" });
-  //     // var url = `https://script.google.com/macros/s/AKfycbzLOuZrPRwRkgq_tPQjBXI-gt21rTkd78eOvIxkXl-ZmvYyQVl7hJWyQBGdjjRzNOgA/exec`;
-  //     // var res = await fetch(url, {
-  //     //   method: "POST",
-  //     //   mode: "cors",
-  //     //   headers: {
-  //     //     "Content-Type": "text/plain;charset=utf-8"
-  //     //   },
-  //     //   body: JSON.stringify(thongTinNguoiDangKy)
-  //     // });
-  //     // console.log(res.json());
-  //   };
-  // }
+  displayModal_DangKyTuVan(displayStatus = 'show') {
+    sys.displayModal({
+      name: '#form-dangkytuvan',
+      displayStatus
+    });
+  }
+  async dangKyTuVan() {
+    var modalValidtion = htmlEl.activeValidationStates("#form-dangkytuvan");
+    if (modalValidtion) {
+      var thongTinNguoiDangKy = {
+        thoiGian: localLocale.subtract(10, 'days').calendar(),
+        hoTen: $("#input-hoten", $("#form-dangkytuvan")).val(),
+        email: $("#input-email", $("#form-dangkytuvan")).val(),
+        chuongTrinhHoc: $("#select-chuongtrinhhoc", $("#form-dangkytuvan")).val(),
+        noiDung: $("#input-noidung", $("#form-dangkytuvan")).val(),
+      };
+      main.displayModal_DangKyTuVan('hide');
+      sys.alert({
+        status: 'success',
+        mess: "Đăng ký thành công, VIETGEN sẽ liên hệ với bạn sau ít phút"
+      });
+      var url = `https://script.google.com/macros/s/AKfycbzLOuZrPRwRkgq_tPQjBXI-gt21rTkd78eOvIxkXl-ZmvYyQVl7hJWyQBGdjjRzNOgA/exec`;
+      var res = await fetch(url, {
+        method: "POST",
+        mode: "cors",
+        headers: {
+          "Content-Type": "text/plain;charset=utf-8",
+          "Origin": "http://localhost:3000/"
+          // "Access-Control-Allow-Origin": "*"
+        },
+        body: JSON.stringify(thongTinNguoiDangKy)
+      });
+      console.log(res.json());
+    };
+  }
   timeline() {
     var mySwiper = new Swiper(".swiper", {
       autoHeight: true,
@@ -315,26 +320,26 @@ class Main {
       prevArrow: '<button type="button" class="carousel-control left" aria-label="carousel-control"><i class="fas fa-chevron-left"></i></button>',
       nextArrow: '<button type="button" class="carousel-control right" aria-label="carousel-control"><i class="fas fa-chevron-right"></i></button>',
       responsive: [{
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 481,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
         }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
-      },
-      {
-        breakpoint: 481,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
       ]
     });
   }

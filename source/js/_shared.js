@@ -59,12 +59,12 @@ class HtmlElement {
     select2Mask(parentName) {
         var htmlEl = this,
             $select2 = htmlEl.findByParent(".form-select2", parentName);
-        var selec2Custom = new Select2Custom({
-            $select: $select2,
-            props: {
-                dropdownParent: parentName
-            }
-        }).init();
+        // var selec2Custom = new Select2Custom({
+        //     $select: $select2,
+        //     props: {
+        //         dropdownParent: parentName
+        //     }
+        // }).init();
     }
     // Tìm thẻ qua thẻ cha (thẻ cha có thể null)
     findByParent(childName, parentName = "") {
@@ -246,12 +246,12 @@ class System {
             "display": "flex"
         })
         // select-input
-        var selec2Custom = new Select2Custom({
-            $select: $(".form-select2"),
-            props: {
-                dropdownParent: $("document")
-            }
-        }).init();
+        // var selec2Custom = new Select2Custom({
+        //     $select: $(".form-select2"),
+        //     props: {
+        //         dropdownParent: $("document")
+        //     }
+        // }).init();
         /**
          * Gia hạn session timeout
          */
