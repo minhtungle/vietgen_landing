@@ -31,9 +31,9 @@ class Main {
     main.addDay();
   }
   lienKetMXH(tenTrang = "facebook") {
-    var facebook = "https://www.facebook.com/tuyendungnhansucapcaoVN";
-    var insta = "https://www.facebook.com/tuyendungnhansucapcaoVN";
-    var x = "https://www.facebook.com/tuyendungnhansucapcaoVN";
+    var facebook = "https://www.facebook.com/vietgenacademy";
+    var insta = "https://www.facebook.com/vietgenacademy";
+    var x = "https://www.facebook.com/vietgenacademy";
     if (tenTrang == "facebook") {
       window.open(facebook);
     } else if (tenTrang == "insta") {
